@@ -1,0 +1,9 @@
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+--font-title-ps2p: 'PressStart2P';
+--background-draient-main:#d3d3d3;
+
+
+--backround-color: #fff;
+--border-color: #000;
+}

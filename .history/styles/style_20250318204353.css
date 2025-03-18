@@ -1,0 +1,382 @@
+/* Здесь вы напишете основную часть стилей страницы.
+
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+✦ like-icon — для svg-иконки анимированного сердца
+✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
+✦ button__text — для обозначения текстового элемента внутри кнопки
+
+*/
+
+.page {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-title-Inter), sans-serif;
+  font-variation-settings: "wght" var(--font-weight-normal);
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  inline-size: clamp(375px, 100%, 700px);
+  background-image: var(--gradients);
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+  margin: 0 auto;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--border-color);
+  background-color: var(--backround-color);
+  margin-block-start: 102px;
+  margin-block-end: 102px;
+  min-block-size: 364px;
+  inline-size: 100%;
+}
+
+.title-main {
+font-family: var();
+}
+
+.title-header {
+  display: flex;
+  font-weight: 400px;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  font-family: var(--font-title-ps2p);
+}
+
+.subtitle-header {
+  font-family: var(--font-title-ps2p);
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  justify-self: center;
+  line-height: 14px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.container {
+  inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+}
+
+.container__card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.card__title {
+  font-family: var(--font-title-Inter);
+  font-weight: var(--font-weight-bold);
+  font-size: 18px;
+  margin: 4px 12px 6px 12px;
+}
+
+.main__image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 2px var(--border-color) solid;
+  background-color: var(--backround-color);
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  margin: 25px;
+}
+
+.image__container {
+  position: relative;
+  z-index: 0;
+  padding: 0;
+  margin: 0;
+  border-block-start: 1px solid var(--border-color);
+  border-block-end: 1px solid var(--border-color);
+  clip-path: inset(0);
+}
+
+.label {
+  position: absolute;
+  font-family: var(--font-title-ps2p), sans-serif;
+  font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+  line-height: 90%;
+  z-index: 2;
+  filter: none;
+  top: 23px;
+  right: 25px;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+}
+
+@supports (-webkit-text-stroke: 1px var(--backround-color)) {
+  .label {
+    -webkit-text-stroke: 1px var(--backround-color);
+    text-shadow: none;
+  }
+}
+
+.filter-brightness {
+  filter: brightness(140%);
+}
+
+.filter-sepia {
+  filter: sepia(70%) opacity(0.8);
+}
+
+.filter-saturate {
+  filter: saturate(200%);
+}
+
+.filter-grayscale {
+  filter: grayscale(0.7);
+}
+
+.filter-invert {
+  filter: invert(1) contrast(80%);
+}
+
+.filter-grayscale-sepia {
+  filter: grayscale(0.5) sepia(60%);
+}
+
+.filter-blur {
+  filter: blur(0.3rem);
+}
+
+.filter-hue {
+  filter: hue-rotate(-25deg) sepia(30%);
+}
+
+.main__text {
+  font-family: var(--font-title-Inter);
+  font-weight: var(--font-weight-normal);
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+  gap: 28px;
+}
+
+.card__like {
+  display: flex;
+  margin-block-end: 25px;
+  margin-inline-end: 25px;
+  justify-self: flex-end;
+  justify-content: end;
+  gap: 7px;
+}
+
+.button {
+  position: relative;
+  font-family: var(--font-title-ps2p), sans-serif;
+  font-size: 14px;
+  border: 2px solid var(--border-color);
+  background-color: var(--backround-color);
+  appearance: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: var(--fill-button-color);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0px 0px var(--fill-button-color);
+}
+
+.button__text {
+  position: relative;
+  display: block;
+  font-family: var(--font-title-ps2p);
+  font-size: var(--button-size);
+  z-index: 3;
+  mix-blend-mode: difference;
+  color: var(--button-text-hover);
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: 2px solid transparent;
+  padding: 0;
+  cursor: pointer;
+  max-block-size: 38px;
+  transition: border 0.1s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: none;
+  border-color: var(--like-fill-color);
+}
+
+.card__like-button {
+  background-color: var(--backround-color);
+  block-size: 38px;
+  inline-size: 130px;
+  align-items: center;
+}
+
+.save-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0px 15px 0px;
+  inline-size: 335px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin-block-start: 52px;
+  margin-block-end: 105px;
+  gap: 8px;
+}
+
+.save-button:hover .floppy-wraper {
+  filter: invert(1);
+}
+
+.floppy-wraper {
+  inline-size: 21px;
+  block-size: 21px;
+}
+
+.save-button__icon {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.floppy-dialog-wraper {
+  display: block;
+  inline-size: 39px;
+  block-size: 39px;
+}
+
+.dialog {
+  font-family: var(--font-title-ps2p), sans-serif;
+  text-transform: uppercase;
+  line-height: 150%;
+  background-color: var(--backround-color);
+  inline-size: 355px;
+  min-block-size: 190px;
+  padding: 0;
+  font-size: 14px;
+}
+
+.dialog::backdrop {
+  background-color: var(--backround-color-backdrop);
+}
+
+.dialog__window {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  min-block-size: 190px;
+  block-size: 100%;
+  inline-size: 100%;
+  padding: 30px;
+}
+
+.dialog-floppy {
+  block-size: 100%;
+}
+
+.dialog-button {
+  inline-size: 293px;
+  block-size: 40px;
+  text-transform: uppercase;
+}
+
+.dialog__content {
+  display: flex;
+  align-items: center;
+  inline-size: 293px;
+  block-size: 62px;
+  gap: 20px;
+}
+
+@media (width <= 390px) {
+  .page {
+    inline-size: 100%;
+  }
+}
+
+
+@media (width <= 375px) {
+  .page {
+    inline-size: 100%;
+  }
+
+  .header {
+    min-block-size: 327px;
+    margin-block-start: 100px;
+    margin-block-end: 100px;
+  }
+
+  .label {
+    right: 10px;
+  }
+
+  .save-button {
+    flex-direction: column;
+    max-inline-size: 310px;
+  }
+
+  .floppy-wraper {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+
+  .dialog {
+    inline-size: 340px;
+  }
+
+  .dialog-button {
+    inline-size: 260px;
+  }
+
+  .dialog__content {
+    inline-size: 257px;
+  }
+}

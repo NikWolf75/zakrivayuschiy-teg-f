@@ -1,0 +1,14 @@
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+--font-title-ps2p: 'PressStart2P';
+--background-gradient-main:#d3d3d3;
+--background-gradient-line:#e7e7e7;
+--background-gradient-lines:#1a1a1a;
+
+--gradients: repeating-linear-gradient( #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+repeating-linear-gradient(#d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+;
+
+--backround-color: #fff;
+--border-color: #000;
+}

@@ -1,0 +1,199 @@
+/* Здесь вы напишете основную часть стилей страницы.
+
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+✦ like-icon — для svg-иконки анимированного сердца
+✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
+✦ button__text — для обозначения текстового элемента внутри кнопки
+
+*/
+
+.page {
+  min-inline-size: 320px;
+  min-block-size: 100dvh;
+  background-image: var(--gradients);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.header {
+  width: 100%;
+}
+
+.title-header {
+  display: flex;
+  font-weight: 400px;
+  justify-content: center;
+  align-items: center;
+  font-size: 49px;
+  line-height: 49px;
+  font-family: var(--font-title-ps2p);
+}
+
+.subtitle-header {
+  display: flex;
+  font-family: var(--font-title-ps2p);
+  font-weight: 400;
+  font-size: 14px;
+  justify-self: center;
+  line-height: 14px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.container {
+  background-color: var(--backround-color);
+  margin-top: 100px;
+  border: 2px var(--border-color) solid;
+  width: 100%;
+  justify-self: center;
+  padding-bottom: 120px;
+  padding-top: 120px;
+}
+
+.container__card {
+  display: flex;
+  margin-top: 100px;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.card__title {
+  font-family: var(--font-title-Inter);
+  font-weight: var(--font-weight-bold);
+  font-size: 18px;
+  border: 1px var(--backround-color) solid;
+  padding: 7px 11px;
+  line-height: 1.1;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px var(--border-color) solid;
+  background-color: var(--backround-color);
+}
+
+.image__container {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  font-family: var(--font-title-ps2p);
+  font-size: var(--button-size);
+  text-shadow: -1px 0 #fff, 0 1px;
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+  right: 13px;
+  top: 25px;
+
+}
+
+@supports (
+  (text-stroke: var(--stroke-color)) or
+  (-webkit-text-stroke: var(--stroke-color))
+) {
+  .label {
+    (text-stroke: var(--stroke-color));
+    -webkit-text-stroke: var(--stroke-color);
+    text-shadow: none;
+  }
+}
+
+.main__text, .main__sub-text {
+  font-family: var(--font-title-Inter);
+  font-weight: var(--font-weight-normal);
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 30px 26px 24px;
+  gap: 26px;
+}
+
+.card__like {
+  display: flex;
+  margin-block-end: 25px;
+  margin-inline-end: 25px;
+  justify-self: flex-end;
+  justify-content: end;
+  gap: 7px;
+}
+
+.button__icon {
+  cursor: pointer;
+  border: none;
+  block-size: 38px;
+  background-color: var(--backround-color);
+  padding: 0;
+}
+
+.like-icon {
+  inline-size: 38px;
+  block-size: 36px;
+}
+
+.card__like-button {
+  background-color: var(--backround-color);
+  block-size: 38px;
+  min-inline-size: 130px;
+}
+
+.button__text {
+  font-family: var(--font-title-ps2p);
+  font-size: var(--button-size);
+}
+
+footer {
+  display: flex;
+  justify-self: center;
+  padding: 50px 0 100px 0;
+}
+
+.save {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: var(--border-color);
+  cursor: pointer;
+  background-color: var(--backround-color);
+  white-space: nowrap;
+}
+
+.dialog-memory[open] {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 40px;
+  inline-size: 360px;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0, 0, 0 / 0.75);
+}
+
+.dialog__window {
+  font-family: var(--font-title-ps2p);
+  font-size: var(--button-size);
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 20px;
+  text-transform: uppercase;
+  padding-block-end: 30px;
+}
+
+.icon__memory {
+  margin-block-start: 10px;
+}
+
+.dialog__window-text {
+  
+}
