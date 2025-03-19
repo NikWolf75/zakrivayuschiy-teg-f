@@ -35,16 +35,15 @@
     transition: fill 0.3s linear;
 }
 
+.card__icon-button:active .main-body {
+    fill: transparent;
+    transition: fill 0.3s 0.05s linear;
+}
+
 .card__icon-button:hover .main-body {
     fill: var(--like-frame-color);
     transition: fill 0.3s 0.05s linear;
 }
-
-.card__icon-button:active .main-body {
-    fill: var(--like-fill-color);
-    transition: fill 0.3s 0.05s linear;
-}
-
 
 .card__icon-button .core {
     fill: transparent;

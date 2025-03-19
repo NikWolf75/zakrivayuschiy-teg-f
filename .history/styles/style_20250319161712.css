@@ -233,12 +233,12 @@
 }
 
 .card__icon-button {
-  background-color: var(--backround-color);
+  background-color: var(--backround-color)
   border: none;
   padding: 0;
   cursor: pointer;
   max-block-size: 38px;
-  transition: border 0.3s ease;
+  transition: border 0.1s ease;
 }
 
 .card__icon-button:focus {
