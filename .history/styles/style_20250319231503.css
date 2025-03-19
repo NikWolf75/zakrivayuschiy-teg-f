@@ -36,8 +36,8 @@
   justify-content: center;
   border: 2px solid var(--border-color);
   background-color: var(--backround-color);
-  margin-block-start: 99px;
-  margin-block-end: 103px;
+  margin-block-start: 100px;
+  margin-block-end: 102px;
   min-block-size: 368px;
   inline-size: 100%;
 }
@@ -79,7 +79,7 @@
   font-weight: var(--font-weight-bold);
   font-size: 18px;
   line-height: auto;
-  margin: 4px 2px 5px 11px;
+  margin: 3px 2px 8px 11px;
   font-variation-settings: "wght" var(--font-weight-bold);
 }
 
