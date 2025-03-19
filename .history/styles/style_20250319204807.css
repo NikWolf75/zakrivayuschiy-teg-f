@@ -227,18 +227,6 @@
   transition: border 0.3s ease;
 }
 
-.card__icon-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  border: var(--border-color);
-}
-
-.button:focus-visible {
-  outline: none;
-  box-shadow: 2px 2px 0px var(--fill-button-color);
-}
 
 .button__text {
   position: relative;

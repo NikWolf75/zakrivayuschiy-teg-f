@@ -231,9 +231,6 @@
   outline: none;
 }
 
-.card__icon-button:focus-visible {
-  border: var(--border-color);
-}
 
 .button:focus-visible {
   outline: none;

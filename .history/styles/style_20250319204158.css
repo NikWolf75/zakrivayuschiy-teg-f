@@ -194,10 +194,7 @@
   transition: box-shadow 0.3s ease;
 }
 
-.button:focus {
-  outline: none;
-  box-shadow: 2px 2px 0 var(--contour-color);
-}
+
 
 .button::before {
   content: "";
@@ -218,6 +215,21 @@
   transform: scaleX(1);
 }
 
+.button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0px 0px var(--fill-button-color);
+}
+
+.button__text {
+  position: relative;
+  display: block;
+  font-family: var(--accent-font);
+  font-size: var(--button-size);
+  z-index: 3;
+  mix-blend-mode: difference;
+  color: var(--button-text-hover);
+}
+
 .card__icon-button {
   background-color: var(--backround-color);
   border: none;
@@ -233,21 +245,6 @@
 
 .card__icon-button:focus-visible {
   border: var(--border-color);
-}
-
-.button:focus-visible {
-  outline: none;
-  box-shadow: 2px 2px 0px var(--fill-button-color);
-}
-
-.button__text {
-  position: relative;
-  display: block;
-  font-family: var(--accent-font);
-  font-size: var(--button-size);
-  z-index: 3;
-  mix-blend-mode: difference;
-  color: var(--button-text-hover);
 }
 
 .card__like-button {

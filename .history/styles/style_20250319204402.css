@@ -218,26 +218,9 @@
   transform: scaleX(1);
 }
 
-.card__icon-button {
-  background-color: var(--backround-color);
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  max-block-size: 38px;
-  transition: border 0.3s ease;
-}
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  border: var(--border-color);
-}
-
 .button:focus-visible {
   outline: none;
-  box-shadow: 2px 2px 0px var(--fill-button-color);
+  box-shadow: 2px 2px 0px 0px var(--fill-button-color);
 }
 
 .button__text {

@@ -237,7 +237,7 @@
 
 .button:focus-visible {
   outline: none;
-  box-shadow: 2px 2px 0px var(--fill-button-color);
+  box-shadow: 2px 2px 0px 0px var(--fill-button-color);
 }
 
 .button__text {
