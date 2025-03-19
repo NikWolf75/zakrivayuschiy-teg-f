@@ -14,7 +14,7 @@ repeating-linear-gradient(#d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent
 repeating-linear-gradient(#e7e7e7 0.01%, #1a1a1a);
 --fill-button-color: #000;
 --backround-color: #fff;
---border-color: #000;
+--border-color: 2px solid #000;
 --contour-color: #000;
 --animation-fill-color: #FF0000;
 --stroke-color: 1px #fff;

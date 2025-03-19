@@ -270,6 +270,10 @@
   gap: 8px;
 }
 
+.save-button:hover .floppy-wraper {
+  filter: invert(1);
+}
+
 .floppy-wraper {
   inline-size: 21px;
   block-size: 21px;

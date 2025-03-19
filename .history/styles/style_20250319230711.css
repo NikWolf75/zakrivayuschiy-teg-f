@@ -204,7 +204,6 @@
   position: absolute;
   display: block;
   background-color: var(--backround-color);
-  mix-blend-mode: difference;
   transform-origin: left;
   block-size: 100%;
   inline-size: 100%;
@@ -268,6 +267,11 @@
   margin-block-start: 52px;
   margin-block-end: 105px;
   gap: 8px;
+}
+
+.save-button:hover .floppy-wraper {
+  filter: invert(1);
+  mix-blend-mode: difference;
 }
 
 .floppy-wraper {
